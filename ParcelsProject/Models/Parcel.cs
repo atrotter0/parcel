@@ -11,7 +11,7 @@ namespace ParcelsProject.Models
         private int _height;
         private int _weight;
         private int _totalVolume;
-        private int _cost;
+        private double _cost;
 
         public void SetSender(string name)
         {
@@ -73,12 +73,12 @@ namespace ParcelsProject.Models
             return _totalVolume;
         }
 
-        public void SetCost(int cost)
+        public void SetCost(double cost)
         {
             _cost = cost;
         }
 
-        public int GetCost()
+        public double GetCost()
         {
             return _cost;
         }
@@ -89,6 +89,10 @@ namespace ParcelsProject.Models
             this.SetTotalVolume(volume);
         }
 
-
+        public void CalculateCost()
+        {
+            double cost = (this.GetTotalVolume() + this.GetWeight()) *.01;
+            this.SetCost(cost);
+        }
     }
 }

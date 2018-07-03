@@ -66,5 +66,15 @@ namespace ParcelsProject.Tests
             package.CalculateVolume();
             Assert.AreEqual(10000, package.GetTotalVolume());
         }
+
+        [TestMethod]
+        public void CalculateCost_CalculatesCost_Int()
+        {
+            Parcel package = new Parcel();
+            package.SetTotalVolume(10000);
+            package.SetWeight(1000);
+            package.CalculateCost();
+            Assert.AreEqual(110, package.GetCost());
+        }
     }
 }
