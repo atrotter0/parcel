@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using ParcelsProject.Controllers;
 using ParcelsProject.Models;
@@ -7,8 +8,13 @@ using ParcelsProject.Models;
 namespace ParcelsProject.Tests
 {
     [TestClass]
-    public class HomeControllerTest
+    public class HomeControllerTest : IDisposable
     {
+        public void Dispose()
+        {
+            Parcel.ClearAll();
+        }
+
         [TestMethod]
         public void ParcelForm_ReturnsCorrectView_True()
         {
@@ -28,7 +34,7 @@ namespace ParcelsProject.Tests
         [TestMethod]
         public void ParcelResults_HasCorrectModelType_Parcel()
         {
-            ViewResult parcelResultsView = new HomeController().ParcelResults("lina", 10, 10, 10, 10) as ViewResult;
+            ViewResult parcelResultsView = new HomeController().ParcelResults("", 10, 10, 10, 10) as ViewResult;
             var result = parcelResultsView.ViewData.Model;
             Assert.IsInstanceOfType(result, typeof(Parcel));
         }

@@ -6,8 +6,13 @@ using ParcelsProject.Models;
 namespace ParcelsProject.Tests
 {
     [TestClass]
-    public class ParcelTest
+    public class ParcelTest : IDisposable
     {
+        public void Dispose()
+        {
+            Parcel.ClearAll();
+        }
+
         [TestMethod]
         public void SetGetSender_SetsGetsSender_String()
         {
@@ -81,9 +86,9 @@ namespace ParcelsProject.Tests
         public void SaveGetAll_SavesGetsParcelList_List()
         {
             Parcel package01 = new Parcel();
-            // package01.SaveParcel();
+            package01.SaveParcel();
             Parcel package02 = new Parcel();
-            // package02.SaveParcel();
+            package02.SaveParcel();
             List<Parcel> compare = new List<Parcel> { package01, package02 };
             CollectionAssert.AreEqual(compare, Parcel.GetAll());
         }

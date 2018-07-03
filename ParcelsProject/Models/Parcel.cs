@@ -73,10 +73,15 @@ namespace ParcelsProject.Models
         {
             foreach(Parcel item in _parcelsList)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.GetSender());
             }
 
             return _parcelsList;
+        }
+
+        public static void ClearAll()
+        {
+            _parcelsList.Clear();
         }
 
         public void SetTotalVolume(int volume)
