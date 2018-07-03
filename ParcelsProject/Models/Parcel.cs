@@ -71,11 +71,6 @@ namespace ParcelsProject.Models
 
         public static List<Parcel> GetAll()
         {
-            foreach(Parcel item in _parcelsList)
-            {
-                Console.WriteLine(item.GetSender());
-            }
-
             return _parcelsList;
         }
 
