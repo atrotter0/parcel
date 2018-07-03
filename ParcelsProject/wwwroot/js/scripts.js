@@ -7,7 +7,7 @@ function validateFields() {
 }
 
 function isValid(element) {
-    if ($(element).val() != "") return true;
+    if ($(element).val() != " " && $(element).val() != "") return true;
 }
 
 function enableBtn(element) {
