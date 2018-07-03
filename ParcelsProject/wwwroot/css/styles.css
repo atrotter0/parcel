@@ -59,6 +59,11 @@ label {
     box-shadow: 2px 2px 20px #4e4e4e;
 }
 
+.btn:disabled {
+    background-color: #736c6b;
+    border-color: #736c6b;
+}
+
 a {
     color: #fff;
 }
