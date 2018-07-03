@@ -11,7 +11,7 @@ namespace ParcelsProject.Controllers
             return View();
         }
 
-        [HttpGet("/parcel_results")]
+        [HttpPost("/parcel_results")]
         public ActionResult ParcelResults(string name, int weight, int height, int length, int width)
         {
             Parcel package = new Parcel();

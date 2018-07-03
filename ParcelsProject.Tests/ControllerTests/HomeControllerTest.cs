@@ -36,7 +36,7 @@ namespace ParcelsProject.Tests
         {
             ViewResult parcelResultsView = new HomeController().ParcelResults("Devin", 10, 10, 10, 10) as ViewResult;
             var result = parcelResultsView.ViewData.Model;
-            Assert.IsInstanceOfType(result, typeof(Parcel));
+            Assert.IsInstanceOfType(result, typeof(List<Parcel>));
         }
     }
 }
