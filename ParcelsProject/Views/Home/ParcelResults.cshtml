@@ -5,6 +5,14 @@
 <div class="container">
     <div class="jumbotron">
         <h3>Here is the receipt for your package to the depths of Mordor:</h3>
-        <h4>Your package will cost: ₪@Model.GetCost() Hryvnias</h4>
+        <h4>Your package will cost: ₪@Model[@Model.Count - 1].GetCost() Hryvnias</h4>
+    </div>
+    <div class="panel">
+    <div class="panel-body">
+        @foreach(var package in Model)
+        {
+            <h4>@package.GetSender(): your package will cost: ₪@package.GetCost() Hryvnias</h4>
+        }
+    </div>
     </div>
 </div>

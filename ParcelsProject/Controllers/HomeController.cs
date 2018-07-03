@@ -23,7 +23,7 @@ namespace ParcelsProject.Controllers
             package.CalculateVolume();
             package.CalculateCost();
             package.SaveParcel();
-            return View(package);
+            return View(Parcel.GetAll());
         }
     }
 }
