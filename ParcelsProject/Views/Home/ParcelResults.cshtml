@@ -7,12 +7,22 @@
         <h3>Here is the receipt for your package to the depths of Mordor:</h3>
         <h4>Your package will cost: ₪@Model[@Model.Count - 1].GetCost() Hryvnias</h4>
     </div>
-    <div class="panel">
-    <div class="panel-body">
+    <h3>Parcels Sent:</h3>
+    <div class="grid-container">
+        <div class="grid-item">Sender</div>
+        <div class="grid-item">Cost</div>
+        <div class="grid-item">Length</div>
+        <div class="grid-item">Width</div>
+        <div class="grid-item">Height</div>
+        <div class="grid-item">Weight</div>
         @foreach(var package in Model)
         {
-            <h4>@package.GetSender(): your package will cost: ₪@package.GetCost() Hryvnias</h4>
+            <div class="grid-item">@package.GetSender()</div>
+            <div class="grid-item">₪@package.GetCost() Hryvnias</div>
+            <div class="grid-item">@package.GetLength() cm</div>
+            <div class="grid-item">@package.GetWidth() cm</div>
+            <div class="grid-item">@package.GetHeight() cm</div>
+            <div class="grid-item">@package.GetWeight() grams</div>
         }
-    </div>
     </div>
 </div>
