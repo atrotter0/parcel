@@ -4,17 +4,20 @@
 
 <div class="container">
     <div class="jumbotron">
-        <h3>Here is the receipt for your package to the depths of Mordor:</h3>
-        <h4>Your package will cost: ₪@Model[@Model.Count - 1].GetCost() Hryvnias</h4>
+        <h2 class='fancy-shadow'>Here is the receipt for your package to the depths of Mordor:</h2>
+        <h3 class='fancy-shadow'>Your package will cost: ₪@Model[@Model.Count - 1].GetCost() Hryvnias</h3>
+        <a href="/"><button type='button' class='btn btn-lg btn-info'>Send Another Parcel</a>
     </div>
-    <h3>Parcels Sent:</h3>
+    <div class="parcel-history">
+        <h2 class='fancy-shadow'>Parcel History:</h2>
+    </div>
     <div class="grid-container">
-        <div class="grid-item">Sender</div>
-        <div class="grid-item">Cost</div>
-        <div class="grid-item">Length</div>
-        <div class="grid-item">Width</div>
-        <div class="grid-item">Height</div>
-        <div class="grid-item">Weight</div>
+        <div class="grid-item fancy-shadow">Sender</div>
+        <div class="grid-item fancy-shadow">Cost</div>
+        <div class="grid-item fancy-shadow">Length</div>
+        <div class="grid-item fancy-shadow">Width</div>
+        <div class="grid-item fancy-shadow">Height</div>
+        <div class="grid-item fancy-shadow">Weight</div>
         @foreach(var package in Model)
         {
             <div class="grid-item">@package.GetSender()</div>
