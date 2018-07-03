@@ -76,5 +76,16 @@ namespace ParcelsProject.Tests
             package.CalculateCost();
             Assert.AreEqual(110, package.GetCost());
         }
+
+        [TestMethod]
+        public void SaveGetAll_SavesGetsParcelList_List()
+        {
+            Parcel package01 = new Parcel();
+            // package01.SaveParcel();
+            Parcel package02 = new Parcel();
+            // package02.SaveParcel();
+            List<Parcel> compare = new List<Parcel> { package01, package02 };
+            CollectionAssert.AreEqual(compare, Parcel.GetAll());
+        }
     }
 }

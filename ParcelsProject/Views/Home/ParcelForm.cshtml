@@ -1,0 +1,31 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class='container'>
+<div class='jumbotron'>
+ <h1>Parcels to Mordor</h1>
+</div>
+<div class='panel panel-default'>
+ <div class='panel-heading'>
+   <h4>Fill out the fields below and hit submit to get your parcel's cost</h4>
+ </div>
+ <div class='panel-body'>
+   <form id='parcel-form' action='/parcel_results' method='get'>
+     <div class='form-group'>
+       <label for='name'>Enter the name of Sender:</label>
+       <input type='text' name='name' id='inputName' class='form-control' autocomplete="off">
+       <label for='weight'>Enter the weight of your package:</label>
+       <input type='text' name='weight' id='inputWeight' class='form-control' autocomplete="off">
+       <label for='height'>Enter the height of your package:</label>
+       <input type='text' name='height' id='inputHeight' class='form-control' autocomplete="off">
+       <label for='length'>Enter the length of your package:</label>
+       <input type='text' name='length' id='inputLength' class='form-control' autocomplete="off">
+       <label for='width'>Enter the width of your package:</label>
+       <input type='text' name='width' id='inputWidth' class='form-control' autocomplete="off">
+     </div>
+     <button type='submit' name='button' id='submit-form' class='btn btn-lg btn-info'>Calculate Cost of Shipment to Mordor</button>
+  </form>
+  </div>
+</div>
+</div>

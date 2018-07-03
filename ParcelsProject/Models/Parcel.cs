@@ -12,6 +12,7 @@ namespace ParcelsProject.Models
         private int _weight;
         private int _totalVolume;
         private double _cost;
+        private static List<Parcel> _parcelsList = new List<Parcel> {};
 
         public void SetSender(string name)
         {
@@ -61,6 +62,21 @@ namespace ParcelsProject.Models
         public int GetWeight()
         {
             return _weight;
+        }
+
+        public void SaveParcel()
+        {
+            _parcelsList.Add(this);
+        }
+
+        public static List<Parcel> GetAll()
+        {
+            foreach(Parcel item in _parcelsList)
+            {
+                Console.WriteLine(item);
+            }
+
+            return _parcelsList;
         }
 
         public void SetTotalVolume(int volume)
