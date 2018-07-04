@@ -69,8 +69,9 @@ a {
   color: #fff;
 }
 
-a:hover {
+a:hover, a:focus {
   color: #fff;
+  text-decoration: none;
 }
 
 .parcel-history {
