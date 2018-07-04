@@ -3,42 +3,42 @@
 }
 
 <div class='container'>
-    <div class='jumbotron'>
-       <h1 class='fancy-shadow'>
-           Parcels to Mordor
-           <div class='jumbotron-icon'>
-               <img src='img/sauron-icon.png' alt='Eye of Sauron Image'>
-           </div>
-       </h1>
-    </div>
-    <div class='panel panel-default'>
-     <div class='panel-heading'>
-       <h4>Fill out the fields below and hit submit to calculate your parcel's cost!</h4>
-     </div>
-     <div class='panel-body'>
-       <form id='parcel-form' action='/parcel_results' method='post'>
-         <div class='form-group'>
-           <label for='name' class='fancy-shadow'>Name:</label>
-           <input type='text' name='name' id='inputName' class='form-control' autocomplete="off" required>
-         </div>
-         <div class='form-group'>
-           <label for='weight' class='fancy-shadow'>Weight (gm):</label>
-           <input type='text' name='weight' id='inputWeight' class='form-control' autocomplete="off" required>
-         </div>
-         <div class='form-group'>
-           <label for='height' class='fancy-shadow'>Height (cm):</label>
-           <input type='text' name='height' id='inputHeight' class='form-control' autocomplete="off" required>
-         </div>
-         <div class='form-group'>
-           <label for='length' class='fancy-shadow'>Length (cm):</label>
-           <input type='text' name='length' id='inputLength' class='form-control' autocomplete="off" required>
-         </div>
-         <div class='form-group'>
-           <label for='width' class='fancy-shadow'>Width (cm):</label>
-           <input type='text' name='width' id='inputWidth' class='form-control' autocomplete="off" required>
-         </div>
-         <button type='submit' name='button' id='submit-form' class='btn btn-lg btn-info'>Calculate Cost of Shipment to Mordor</button>
-      </form>
+  <div class='jumbotron'>
+    <h1 class='fancy-shadow'>
+      Parcels to Mordor
+      <div class='jumbotron-icon'>
+        <img src='img/sauron-icon.png' alt='Eye of Sauron Image'>
       </div>
+    </h1>
+  </div>
+  <div class='panel panel-default'>
+    <div class='panel-heading'>
+      <h4>Fill out the fields below and hit submit to calculate your parcel's cost!</h4>
     </div>
+    <div class='panel-body'>
+      <form id='parcel-form' action='/parcel_results' method='post'>
+        <div class='form-group'>
+          <label for='name' class='fancy-shadow'>Name:</label>
+          <input type='text' name='name' id='inputName' class='form-control' autocomplete="off" required>
+        </div>
+        <div class='form-group'>
+          <label for='weight' class='fancy-shadow'>Weight (gm):</label>
+          <input type='text' name='weight' id='inputWeight' class='form-control' autocomplete="off" required>
+        </div>
+        <div class='form-group'>
+          <label for='height' class='fancy-shadow'>Height (cm):</label>
+          <input type='text' name='height' id='inputHeight' class='form-control' autocomplete="off" required>
+        </div>
+        <div class='form-group'>
+          <label for='length' class='fancy-shadow'>Length (cm):</label>
+          <input type='text' name='length' id='inputLength' class='form-control' autocomplete="off" required>
+        </div>
+        <div class='form-group'>
+          <label for='width' class='fancy-shadow'>Width (cm):</label>
+          <input type='text' name='width' id='inputWidth' class='form-control' autocomplete="off" required>
+        </div>
+        <button type='submit' name='button' id='submit-form' class='btn btn-lg btn-info'>Calculate Cost of Shipment to Mordor</button>
+      </form>
+    </div>
+  </div>
 </div>

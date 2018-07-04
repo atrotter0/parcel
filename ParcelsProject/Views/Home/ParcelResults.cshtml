@@ -3,29 +3,29 @@
 }
 
 <div class="container">
-    <div class="jumbotron">
-        <h2 class='fancy-shadow'>Here is the receipt for your package to the depths of Mordor:</h2>
-        <h3 class='fancy-shadow'>Your package will cost: ₪@Model[@Model.Count - 1].GetCost() Hryvnias</h3>
-        <a href="/"><button type='button' class='btn btn-lg btn-info'>Send Another Parcel</a>
-    </div>
-    <div class="parcel-history">
-        <h2 class='fancy-shadow'>Parcel History:</h2>
-    </div>
-    <div class="grid-container">
-        <div class="grid-item fancy-shadow">Sender</div>
-        <div class="grid-item fancy-shadow">Cost</div>
-        <div class="grid-item fancy-shadow">Length</div>
-        <div class="grid-item fancy-shadow">Width</div>
-        <div class="grid-item fancy-shadow">Height</div>
-        <div class="grid-item fancy-shadow">Weight</div>
-        @foreach(var package in Model)
-        {
-            <div class="grid-item">@package.GetSender()</div>
-            <div class="grid-item">₪@package.GetCost() Hryvnias</div>
-            <div class="grid-item">@package.GetLength() cm</div>
-            <div class="grid-item">@package.GetWidth() cm</div>
-            <div class="grid-item">@package.GetHeight() cm</div>
-            <div class="grid-item">@package.GetWeight() grams</div>
-        }
-    </div>
+  <div class="jumbotron">
+    <h2 class='fancy-shadow'>Here is the receipt for your package to the depths of Mordor:</h2>
+    <h3 class='fancy-shadow'>Your package will cost: ₪@Model[@Model.Count - 1].GetCost() Hryvnias</h3>
+    <a href="/"><button type='button' class='btn btn-lg btn-info'>Send Another Parcel</a>
+  </div>
+  <div class="parcel-history">
+    <h2 class='fancy-shadow'>Parcel History:</h2>
+  </div>
+  <div class="grid-container">
+    <div class="grid-item fancy-shadow">Sender</div>
+    <div class="grid-item fancy-shadow">Cost</div>
+    <div class="grid-item fancy-shadow">Length</div>
+    <div class="grid-item fancy-shadow">Width</div>
+    <div class="grid-item fancy-shadow">Height</div>
+    <div class="grid-item fancy-shadow">Weight</div>
+    @foreach(var package in Model)
+    {
+      <div class="grid-item">@package.GetSender()</div>
+      <div class="grid-item">₪@package.GetCost() Hryvnias</div>
+      <div class="grid-item">@package.GetLength() cm</div>
+      <div class="grid-item">@package.GetWidth() cm</div>
+      <div class="grid-item">@package.GetHeight() cm</div>
+      <div class="grid-item">@package.GetWeight() grams</div>
+    }
+  </div>
 </div>
