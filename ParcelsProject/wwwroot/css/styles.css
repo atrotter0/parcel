@@ -2,6 +2,7 @@ body {
   background-image: url("../img/mordor.png");
   background-repeat: no-repeat;
   font-family: 'IM Fell English SC', serif;
+  background-color: #444;
 }
 
 .container .jumbotron {
