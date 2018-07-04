@@ -1,18 +1,12 @@
-# Project Name Here
+# Parcels to Mordor
 
-#### Epicodus C# exercise, date
+#### Epicodus C# exercise, 07.03.18
 
-#### By Your Name Here
+#### By Abel Trotter & Devin Mounts
 
 ## Description
 
-Add a description here
-
-## Specs
-
-| Behavior | Input | Output |
-|----------|-------|--------|
-| Behavior | input | output |
+Fill out a form specifying your parcel's height, weight, length, and width to view the cost of the shipment to Mordor!
 
 ## Setup on OSX
 
@@ -20,6 +14,7 @@ Add a description here
 * Download and install Mono
 * Clone the repo
 * Run `dotnet restore` from within the project directory
+* Run `dotnet test` from within test directory to run the testing suite
 * Run `dotnet run` to start the server
 
 ## Contribution Requirements
@@ -32,13 +27,12 @@ Add a description here
 ## Technologies Used
 
 * .Net Core 1.1.4
-
-## Links
-
-* Add links here
+* JavaScript
+* jQuery
+* Bootstrap
 
 ## License
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2018 **Your Name Here**
+Copyright (c) 2018 **Abel Trotter & Devin Mounts**

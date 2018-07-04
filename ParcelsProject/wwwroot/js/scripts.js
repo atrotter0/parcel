@@ -1,5 +1,6 @@
 function validateFields() {
-    if (isValid("#inputName") && isValid("#inputWeight") && isValid("#inputHeight") && isValid("#inputLength") && isValid("#inputWidth")) {
+    if (isValid("#inputName") && isValid("#inputWeight") && isValid("#inputHeight")
+        && isValid("#inputLength") && isValid("#inputWidth")) {
         enableBtn("#submit-form");
     } else {
         disableBtn("#submit-form");
@@ -22,10 +23,6 @@ $(document).ready(function() {
     disableBtn("#submit-form");
 
     $("input:text").keyup(function() {
-        validateFields();
-    });
-
-    $("#submit-form").click(function() {
         validateFields();
     });
 });
